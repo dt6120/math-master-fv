@@ -37,3 +37,9 @@ Certora works differently than Halmos with a little more effort required to get 
 # ensure CERTORAKEY env is exported
 certoraRun <RELATIVE_PATH_FROM_ROOT_DIR_TO_CONF_FILE>
 ```
+
+# Course challenge completion
+
+- **Transaction hash**: https://sepolia.etherscan.io/tx/0x86c478f24289cffa482b14252e2024f3bb51165b31872e8ce1585241567a766b
+
+- **NFT info**: https://sepolia.etherscan.io/nft/0x31801c3e09708549c1b2c9e1cfbf001399a1b9fa/665
