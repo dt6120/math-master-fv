@@ -58,4 +58,19 @@ contract MathMastersTest is Base_Test {
     function testSqrtFuzzSolmate(uint256 x) public pure {
         assert(MathMasters.sqrt(x) == solmateSqrt(x));
     }
+
+    function check_halmos_mulWadUp(uint256 x, uint256 y) public pure {
+        require(x == 0 || y == 0 || y <= type(uint256).max / x);
+        uint256 result = MathMasters.mulWadUp(x, y);
+        uint256 expected = x * y == 0 ? 0 : (x * y - 1) / 1e18 + 1;
+        assert(result == expected);
+    }
+
+    function check_halmos_sqrtMatchesUni(uint256 x) public pure {
+        assert(MathMasters.sqrt(x) == uniSqrt(x));
+    }
+
+    function check_halmos_sqrtMatchesSolmate(uint256 x) public pure {
+        assert(MathMasters.sqrt(x) == solmateSqrt(x));
+    }
 }
