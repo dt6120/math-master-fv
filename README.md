@@ -34,5 +34,6 @@ Certora works differently than Halmos with a little more effort required to get 
 ### Useful commands
 - Formally verify an invariant or rule using its conf and spec files
 ```bash
+# ensure CERTORAKEY env is exported
 certoraRun <RELATIVE_PATH_FROM_ROOT_DIR_TO_CONF_FILE>
 ```
